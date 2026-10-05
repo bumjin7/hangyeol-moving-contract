@@ -604,18 +604,37 @@ END:VCALENDAR`
           gap:18px;
           margin-bottom:22px;
         ">
-          <div style="padding-top:0;margin-left:34px;flex:1;min-width:0;">
+          <div style="
+            margin-left:34px;
+            flex:1;
+            min-width:0;
+            height:88px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+          ">
             <img
-              src="/contract-title-v4.png"
-              alt="이사 계약서 - 고객의 새로운 시작을 한결같이, 한결이사가 함께합니다."
+              src="/contract-title-only-v2.png"
+              alt="이사 계약서"
               style="
                 width:520px;
                 max-width:100%;
-                height:auto;
+                height:48px;
                 display:block;
                 object-fit:contain;
               "
             />
+            <div style="
+              margin-top:4px;
+              font-size:12px;
+              font-weight:800;
+              letter-spacing:0.1px;
+              line-height:1.2;
+              color:#168fbd;
+              white-space:nowrap;
+              text-align:center;
+            ">고객의 새로운 시작을 한결같이, 한결이사가 함께합니다.</div>
           </div>
 
           <div style="
