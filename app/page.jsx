@@ -604,9 +604,20 @@ END:VCALENDAR`
           gap:18px;
           margin-bottom:22px;
         ">
-          <div style="padding-top:8px;margin-left:70px;">
-            <div style="font-size:36px;font-weight:900;letter-spacing:4px;color:#0f8f8a;line-height:1.15;">이사 계약서</div>
-            <div style="margin-top:8px;font-size:13px;font-weight:800;letter-spacing:0.4px;color:#168fbd;">고객의 새로운 시작을 한결같이, 한결이사가 함께합니다.</div>
+          <div style="padding-top:4px;margin-left:52px;">
+            <div style="
+              display:inline-block;
+              white-space:nowrap;
+              font-size:48px;
+              font-weight:900;
+              letter-spacing:8px;
+              color:#0f9f9a;
+              line-height:1.08;
+              font-family:'Pretendard','SUIT','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+              transform:scaleX(1.12);
+              transform-origin:left center;
+            ">이사 계약서</div>
+            <div style="margin-top:10px;font-size:13px;font-weight:800;letter-spacing:0.4px;color:#168fbd;white-space:nowrap;">고객의 새로운 시작을 한결같이, 한결이사가 함께합니다.</div>
           </div>
 
           <div style="
