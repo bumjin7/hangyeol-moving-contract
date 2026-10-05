@@ -584,7 +584,7 @@ END:VCALENDAR`
           box-sizing:border-box;
         ">
           <img
-            src="/header-logo.png"
+            src="/header-logo-v2.png"
             alt="한결이사 상단 로고"
             style="
               width:100%;
@@ -604,9 +604,18 @@ END:VCALENDAR`
           gap:18px;
           margin-bottom:22px;
         ">
-          <div style="padding-top:8px;margin-left:70px;">
-            <div style="font-size:34px;font-weight:900;letter-spacing:-1px;color:#0b4a7e;line-height:1.15;">이사계약서</div>
-            <div style="margin-top:7px;font-size:13px;font-weight:800;color:#169fe6;">고객의 새로운 시작을 한결같이, 한결이사가 함께합니다.</div>
+          <div style="padding-top:0;margin-left:34px;flex:1;min-width:0;">
+            <img
+              src="/contract-title-v2.png"
+              alt="이사 계약서 - 고객의 새로운 시작을 한결같이, 한결이사가 함께합니다."
+              style="
+                width:520px;
+                max-width:100%;
+                height:auto;
+                display:block;
+                object-fit:contain;
+              "
+            />
           </div>
 
           <div style="
