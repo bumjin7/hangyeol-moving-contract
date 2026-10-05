@@ -615,7 +615,7 @@ END:VCALENDAR`
             align-items:center;
           ">
             <img
-              src="/contract-title-only-v2.png"
+              src="/contract-title-only-v3.png"
               alt="이사 계약서"
               style="
                 width:520px;
@@ -626,7 +626,7 @@ END:VCALENDAR`
               "
             />
             <div style="
-              margin-top:4px;
+              margin-top:10px;
               font-size:12px;
               font-weight:800;
               letter-spacing:0.1px;
