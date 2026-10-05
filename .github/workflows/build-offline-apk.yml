@@ -1,0 +1,77 @@
+name: Build Offline Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'public/**'
+      - 'package.json'
+      - 'android/**'
+      - '.github/workflows/build-offline-apk.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install web dependencies
+        run: npm install
+
+      - name: Create static-export config for APK build
+        run: |
+          cat > next.config.mjs <<'EOF'
+          /** @type {import('next').NextConfig} */
+          const nextConfig = {
+            output: 'export',
+            trailingSlash: true,
+            images: { unoptimized: true },
+          };
+          export default nextConfig;
+          EOF
+
+      - name: Build offline web app
+        run: npm run build
+
+      - name: Copy web build into Android assets
+        run: |
+          rm -rf android/app/src/main/assets
+          mkdir -p android/app/src/main/assets
+          cp -R out/. android/app/src/main/assets/
+          rm -f android/app/src/main/assets/sw.js
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+
+      - name: Build APK
+        working-directory: android
+        run: gradle :app:assembleDebug --stacktrace
+
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk hangyeol-moving-contract-offline.apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hangyeol-offline-apk
+          path: hangyeol-moving-contract-offline.apk
+          if-no-files-found: error
