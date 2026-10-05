@@ -580,7 +580,7 @@ END:VCALENDAR`
           margin:0 -40px 28px -40px;
           background:#ffffff;
           padding:14px 32px 8px 32px;
-          border-bottom:3px solid #169fe6;
+          border-bottom:3px solid #18a9b7;
           box-sizing:border-box;
         ">
           <img
@@ -605,8 +605,8 @@ END:VCALENDAR`
           margin-bottom:22px;
         ">
           <div style="padding-top:8px;margin-left:70px;">
-            <div style="font-size:34px;font-weight:900;letter-spacing:-1px;color:#0b4a7e;line-height:1.15;">이사계약서</div>
-            <div style="margin-top:7px;font-size:13px;font-weight:800;color:#169fe6;">고객의 새로운 시작을 한결같이, 한결이사가 함께합니다.</div>
+            <div style="font-size:36px;font-weight:900;letter-spacing:4px;color:#0f8f8a;line-height:1.15;">이사 계약서</div>
+            <div style="margin-top:8px;font-size:13px;font-weight:800;letter-spacing:0.4px;color:#168fbd;">고객의 새로운 시작을 한결같이, 한결이사가 함께합니다.</div>
           </div>
 
           <div style="
